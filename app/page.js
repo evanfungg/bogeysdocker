@@ -18,9 +18,7 @@ export default function Home() {
             <div>
               <button className="sign-in"><a href="/api/auth/signup">Sign In</a></button>
             </div>
-            <div>
-              <Link href = "./addHole"><button className="guest">Guest</button></Link>
-            </div>
+           
           </div>
         </div>
       </div>
