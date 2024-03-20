@@ -14,14 +14,14 @@ import Link from 'next/link'
 const Holes = () => {
     
   
-  const [data, setData] = useState(null); // Initialize state to store fetched data
-  const { user, isLoading } = useUser(); // Assuming you're correctly setting up Auth0
+  const [data, setData] = useState(null); 
+  const { user, isLoading } = useUser(); 
 
   useEffect(() => {
     const fetchData = async () => {
       if (!isLoading && user) {
         try {
-          const res = await fetch(`http://localhost:3000/api/holes?username=${user.name}`, {
+          const res = await fetch(`/api/holes?username=${user.name}`, {
             method: "GET",
             cache: "no-store",
           });
@@ -39,10 +39,10 @@ const Holes = () => {
     };
 
     fetchData();
-  }, [user, isLoading]); // Depend on user and isLoading so it re-fetches when they change
+  }, [user, isLoading]); 
 
   if (!data) {
-    return <div>Loading...</div>; // Show loading state or handle accordingly
+    return <div>Loading...</div>; 
   }
 
     

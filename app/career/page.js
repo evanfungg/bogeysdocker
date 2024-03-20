@@ -25,7 +25,7 @@ const Holes = () => {
       if (user && !isUserLoading) {
         setIsLoading(true);
         try {
-          const res = await fetch(`http://localhost:3000/api/summary?username=${user.name}`, {
+          const res = await fetch(`api/summary?username=${user.name}`, {
             method: "GET",
             cache: "no-store"
           });
