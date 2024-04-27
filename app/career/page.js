@@ -1,13 +1,11 @@
 'use client'
 import React from "react"
-// import { getSession } from '@auth0/nextjs-auth0';
 import { useEffect, useState } from 'react'
 import { useUser } from '@auth0/nextjs-auth0/client';
 import FirGraphSummary from "@components/FirGraphSummary"
 import GirGraphSummary from "@components/GirGraphSummary"
 import ScoresGraphSummary from "@components/ScoresGraphSummary"
 import './styles.css'
-import Link from 'next/link'
 import PuttsGraphSummary from "@components/PuttsGraphSummary"
 
 

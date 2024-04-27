@@ -1,7 +1,6 @@
 'use client'
 import React from "react"
 import { useEffect, useState } from 'react'
-// import { getSession } from '@auth0/nextjs-auth0';
 import { useUser } from '@auth0/nextjs-auth0/client';
 import FirGraph from "@components/FirGraph"
 import GirGraph from "@components/GirGraph"
@@ -31,7 +30,7 @@ const Holes = () => {
           }
 
           const data = await res.json();
-          setData(data); // Update state with fetched data
+          setData(data); 
         } catch (error) {
           console.error("Error loading holes:", error);
         }
